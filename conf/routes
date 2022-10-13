@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Default path will just redirect to the computer list
+GET     /                           controllers.HomeController.index()
+
+# Computers list (look at the default values for pagination parameters)
+GET     /computers                  controllers.HomeController.list(request: Request, p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+
+# Add computer
+GET     /computers/new              controllers.HomeController.create(request: Request)
+POST    /computers                  controllers.HomeController.save(request: Request)
+
+# Edit existing computer
+GET     /computers/:id              controllers.HomeController.edit(request: Request, id:Long)
+POST    /computers/:id              controllers.HomeController.update(request: Request, id:Long)
+
+# Delete a computer
+POST    /computers/:id/delete       controllers.HomeController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /api/client/software/detail controllers.SoftwareController.getDetailSoftware(request: Request)
+GET     /api/client/software/list   controllers.SoftwareController.getDetailSoftware(request: Request)
+GET     /api/client/software/all    controllers.SoftwareController.getDetailSoftware(request: Request)
+POST    /api/client/software/create controllers.SoftwareController.getDetailSoftware(request: Request)
+PUT     /api/client/software/update controllers.SoftwareController.getDetailSoftware(request: Request)
+DELETE  /api/client/software/delete controllers.SoftwareController.getDetailSoftware(request: Request)
+
