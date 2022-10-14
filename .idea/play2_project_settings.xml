@@ -13,8 +13,8 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="sourceDir" value="C:\Users\Admin\Desktop\Final Term\Source code\play-samples-play-java-ebean-example\app" />
-              <option name="confDir" value="C:\Users\Admin\Desktop\Final Term\Source code\software-products-java-api\app" />
+              <option name="sourceDir" value="C:\Users\Admin\Desktop\Final Term\Source code\software-products-java-api\app" />
+              <option name="confDir" value="$PROJECT_DIR$/app" />
               <option name="templateImports">
                 <list>
                   <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
@@ -44,14 +44,14 @@
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/Admin/Desktop/Final%20Term/Source%20code/software-products-java-api" />
+              <option name="uri" value="$PROJECT_DIR$/../../Final%20Term/software-products-java-api" />
             </ProjectSettingsEntry>
           </value>
         </entry>
         <entry key="software-products-java-api">
           <value>
             <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.8.17/play_2.13-2.8.17.jar" />
+              <option name="playDistrPath" value="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.8.17/play_2.13-2.8.17.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>

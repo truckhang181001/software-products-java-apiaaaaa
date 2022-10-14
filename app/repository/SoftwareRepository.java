@@ -2,13 +2,12 @@ package repository;
 
 import io.ebean.DB;
 import io.ebean.PagedList;
-import io.ebean.Transaction;
 import models.Software;
 
 import java.util.Optional;
 
 public class SoftwareRepository {
-    public Software getDetailSoftwareById(int id) throws Exception {
+    public Software getDetailSoftwareById(long id) throws Exception {
         Optional<Software> software = DB.find(Software.class)
                 .setId(id)
                 .findOneOrEmpty();
@@ -26,36 +25,28 @@ public class SoftwareRepository {
         return result;
     }
 
-    public Long createSoftware(Software software) throws Exception {
+    public Software createSoftware(Software software) throws Exception {
         software.setId(System.currentTimeMillis());
         DB.insert(software);
-        return software.getId();
+        return software;
     }
 
-    public Long updateSoftware(Software newSoftware) {
-        Transaction txn = DB.beginTransaction();
-        Long value = null;
-        try {
-            Software saveSoftware = DB.find(Software.class).setId(newSoftware.getId()).findOne();
-            if (saveSoftware != null) {
-                saveSoftware.save();
-                txn.commit();
-                value = newSoftware.getId();
-            }
-        } finally {
-            txn.end();
+    public Boolean updateSoftware(Software newSoftware) throws Exception {
+        Optional<Software> saveSoftware = DB.find(Software.class).setId(newSoftware.getId()).findOneOrEmpty();
+        if (saveSoftware.isPresent()) {
+            newSoftware.save();
+            return true;
         }
-        return value;
+        return false;
     }
 
-    public Boolean deleteSoftWareById(Long id) {
+    public Boolean deleteSoftWareById(long id) throws Exception {
         Optional<Software> software = DB.find(Software.class)
                 .setId(id)
                 .findOneOrEmpty();
-        if (software.isPresent()){
+        if (software.isPresent()) {
             return DB.delete(software);
         }
-
-        return null;
+        return false;
     }
 }
