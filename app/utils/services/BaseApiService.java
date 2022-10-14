@@ -1,4 +1,4 @@
-package utils;
+package utils.services;
 
 import play.Logger;
 

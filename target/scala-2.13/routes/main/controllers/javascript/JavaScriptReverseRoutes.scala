@@ -132,6 +132,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:28
+    def createSoftware: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.SoftwareController.createSoftware",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/client/software/create"})
+        }
+      """
+    )
+  
   }
 
 

@@ -4,12 +4,11 @@ import io.ebean.PagedList;
 import models.Software;
 import models.requests.CommonListRequest;
 import models.requests.SoftwareRequestModel;
-import models.responses.SoftwareResponseModel;
-import play.libs.Json;
 import play.mvc.BodyParser;
 import play.mvc.Http;
 import play.mvc.Result;
 import services.software.SoftwareService;
+import utils.models.ObjectReference;
 
 import javax.inject.Inject;
 
@@ -42,7 +41,9 @@ public class SoftwareController extends BaseController {
 
     @BodyParser.Of(BodyParser.Json.class)
     public Result createSoftware(Http.Request request) throws Exception {
-        return ok();
+        Software software = this.getBody(request, Software.class);
+        ObjectReference result = this.softwareService.createSoftware(software);
+        return this.ok(result);
     }
 
     public Result deleteSoftware(Http.Request request) throws Exception {

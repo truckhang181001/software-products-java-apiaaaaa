@@ -54,7 +54,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/detail""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/list""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/all""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/create""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/create""", """controllers.SoftwareController.createSoftware(request:Request)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/update""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/delete""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
     Nil
@@ -279,17 +279,17 @@ class Routes(
   )
 
   // @LINE:28
-  private[this] lazy val controllers_SoftwareController_getDetailSoftware11_route = Route("POST",
+  private[this] lazy val controllers_SoftwareController_createSoftware11_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/create")))
   )
-  private[this] lazy val controllers_SoftwareController_getDetailSoftware11_invoker = createInvoker(
+  private[this] lazy val controllers_SoftwareController_createSoftware11_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
-      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+      SoftwareController_2.createSoftware(fakeValue[play.mvc.Http.Request]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SoftwareController",
-      "getDetailSoftware",
+      "createSoftware",
       Seq(classOf[play.mvc.Http.Request]),
       "POST",
       this.prefix + """api/client/software/create""",
@@ -416,10 +416,10 @@ class Routes(
       }
   
     // @LINE:28
-    case controllers_SoftwareController_getDetailSoftware11_route(params@_) =>
+    case controllers_SoftwareController_createSoftware11_route(params@_) =>
       call { 
-        controllers_SoftwareController_getDetailSoftware11_invoker.call(
-          req => SoftwareController_2.getDetailSoftware(req))
+        controllers_SoftwareController_createSoftware11_invoker.call(
+          req => SoftwareController_2.createSoftware(req))
       }
   
     // @LINE:29

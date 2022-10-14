@@ -97,6 +97,12 @@ package controllers {
     
     }
   
+    // @LINE:28
+    def createSoftware(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "api/client/software/create")
+    }
+  
   }
 
 
