@@ -22,3 +22,10 @@ POST    /computers/:id/delete       controllers.HomeController.delete(id:Long)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
+GET     /api/client/software/detail controllers.SoftwareController.getDetailSoftware(request: Request)
+GET     /api/client/software/list   controllers.SoftwareController.getDetailSoftware(request: Request)
+GET     /api/client/software/all    controllers.SoftwareController.getDetailSoftware(request: Request)
+POST    /api/client/software/create controllers.SoftwareController.getDetailSoftware(request: Request)
+PUT     /api/client/software/update controllers.SoftwareController.getDetailSoftware(request: Request)
+DELETE  /api/client/software/delete controllers.SoftwareController.getDetailSoftware(request: Request)
+

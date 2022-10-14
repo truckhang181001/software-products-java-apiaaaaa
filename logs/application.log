@@ -1,27 +1,27 @@
-2022-10-13 21:12:23,069 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-7 - Database [default] initialized
-2022-10-13 21:12:23,073 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
-2022-10-13 21:12:23,126 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-7 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
-2022-10-13 21:12:24,221 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2022-10-15 00:59:05,557 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-9 - Database [default] initialized
+2022-10-15 00:59:05,566 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
+2022-10-15 00:59:05,679 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-9 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
+2022-10-15 00:59:06,599 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2022-10-13 21:12:24,255 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev) (no global state)
-2022-10-13 21:12:24,305 [ERROR] from play.api.http.DefaultHttpErrorHandler in play-dev-mode-akka.actor.default-dispatcher-7 - 
+2022-10-15 00:59:06,628 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2022-10-15 00:59:06,670 [ERROR] from play.api.http.DefaultHttpErrorHandler in play-dev-mode-akka.actor.default-dispatcher-9 - 
 
-! @7p9pi7j1g - Internal server error, for (GET) [/] ->
+! @7pa833beb - Internal server error, for (GET) [/] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5(ApplicationEvolutions.scala:523)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5$adapted(ApplicationEvolutions.scala:516)
-	at play.api.db.evolutions.ApplicationEvolutions$.$anonfun$runEvolutions$1(ApplicationEvolutions.scala:208)
-	at play.api.db.evolutions.ApplicationEvolutions$.withLock(ApplicationEvolutions.scala:229)
-	at play.api.db.evolutions.ApplicationEvolutions$.runEvolutions(ApplicationEvolutions.scala:199)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4(ApplicationEvolutions.scala:516)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4$adapted(ApplicationEvolutions.scala:511)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5(ApplicationEvolutions.scala:519)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5$adapted(ApplicationEvolutions.scala:517)
+	at play.api.db.evolutions.ApplicationEvolutions$.$anonfun$runEvolutions$1(ApplicationEvolutions.scala:210)
+	at play.api.db.evolutions.ApplicationEvolutions$.withLock(ApplicationEvolutions.scala:231)
+	at play.api.db.evolutions.ApplicationEvolutions$.runEvolutions(ApplicationEvolutions.scala:201)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4(ApplicationEvolutions.scala:517)
+	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4$adapted(ApplicationEvolutions.scala:512)
 	at scala.collection.immutable.List.foreach(List.scala:333)
-	at play.api.db.evolutions.EvolutionsWebCommands.handleWebCommand(ApplicationEvolutions.scala:511)
+	at play.api.db.evolutions.EvolutionsWebCommands.handleWebCommand(ApplicationEvolutions.scala:512)
 	at play.core.DefaultWebCommands.$anonfun$handleWebCommand$1(WebCommands.scala:42)
 	at scala.collection.immutable.Stream.flatMap(Stream.scala:200)
 	at play.core.DefaultWebCommands.handleWebCommand(WebCommands.scala:42)
@@ -51,19 +51,32 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2022-10-13 21:13:15,604 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-8 - Shutting down connection pool.
-2022-10-13 21:13:15,768 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] initialized
-2022-10-13 21:13:15,768 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2022-10-13 21:13:15,925 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-10-15 00:59:10,583 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-2 - Shutting down connection pool.
+2022-10-15 00:59:10,762 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized
+2022-10-15 00:59:10,762 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
+2022-10-15 00:59:10,848 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2022-10-13 21:13:15,937 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev) (no global state)
-2022-10-13 22:49:22,613 [INFO] from play.api.internal.libs.concurrent.CoordinatedShutdownSupport in pool-6-thread-7 - Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
-2022-10-13 22:49:22,614 [INFO] from play.core.server.AkkaHttpServer in pool-6-thread-7 - Stopping Akka HTTP server...
-2022-10-13 22:49:22,615 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-44 - Terminating server binding for /0:0:0:0:0:0:0:0:9000
-2022-10-13 22:49:22,681 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-37 - Shutting down connection pool.
-2022-10-13 22:49:22,696 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-46 - Running provided shutdown stop hooks
+2022-10-15 00:59:10,854 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2022-10-15 00:59:12,282 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
+2022-10-15 00:59:12,458 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized
+2022-10-15 00:59:12,458 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
+2022-10-15 00:59:12,575 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2022-10-15 00:59:12,583 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2022-10-15 00:59:12,906 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-10-15 00:59:12,907 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server. This usually indicates the browser has a leftover cookie from another Play application, so clearing cookies may resolve this error message.
+2022-10-15 00:59:12,963 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-10-15 00:59:12,963 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server. This usually indicates the browser has a leftover cookie from another Play application, so clearing cookies may resolve this error message.
+2022-10-15 00:59:13,174 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-10-15 00:59:13,174 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-10-15 00:59:13,174 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server. This usually indicates the browser has a leftover cookie from another Play application, so clearing cookies may resolve this error message.
+2022-10-15 00:59:13,174 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - The JWT signature in the cookie does not match the locally computed signature with the server. This usually indicates the browser has a leftover cookie from another Play application, so clearing cookies may resolve this error message.

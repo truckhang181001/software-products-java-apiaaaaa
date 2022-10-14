@@ -110,5 +110,29 @@ package controllers.javascript {
   
   }
 
+  // @LINE:25
+  class ReverseSoftwareController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def getDetailSoftware: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.SoftwareController.getDetailSoftware",
+      """
+        function() {
+        
+          if (true) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/client/software/detail"})
+          }
+        
+        }
+      """
+    )
+  
+  }
+
 
 }

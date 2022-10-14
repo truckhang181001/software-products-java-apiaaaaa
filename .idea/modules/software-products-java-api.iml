@@ -71,7 +71,7 @@
     <orderEntry type="library" name="sbt: com.typesafe.play:play-java-jdbc_2.13:2.8.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-java_2.13:2.8.17:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc-api_2.13:2.8.17:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc-evolutions_2.13:2.8.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc-evolutions_2.13:2.8.17:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc_2.13:2.8.17:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-json_2.13:2.8.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-logback_2.13:2.8.17:jar" level="project" />
@@ -117,6 +117,7 @@
     <orderEntry type="library" name="sbt: javax.xml.bind:jaxb-api:2.3.1:jar" level="project" />
     <orderEntry type="library" name="sbt: joda-time:joda-time:2.10.5:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.13.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: mysql:mysql-connector-java:5.1.41:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: net.bytebuddy:byte-buddy-agent:1.9.10:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: net.bytebuddy:byte-buddy:1.9.10:jar" level="project" />
     <orderEntry type="library" name="sbt: net.jodah:typetools:0.5.0:jar" level="project" />

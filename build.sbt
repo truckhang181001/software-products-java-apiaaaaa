@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       guice,
       jdbc,
+      evolutions,
       "com.h2database" % "h2" % "1.4.199",
       "org.awaitility" % "awaitility" % "3.1.6" % Test,
       "org.assertj" % "assertj-core" % "3.12.2" % Test,
@@ -15,6 +16,7 @@ lazy val root = (project in file("."))
       "javax.xml.bind" % "jaxb-api" % "2.3.1",
       "javax.activation" % "activation" % "1.1.1",
       "org.glassfish.jaxb" % "jaxb-runtime" % "2.3.2",
+      "mysql" % "mysql-connector-java" % "5.1.41"
     ),
     (Test / testOptions) += Tests.Argument(TestFrameworks.JUnit, "-a", "-v"),
     javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation", "-Werror")

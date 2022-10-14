@@ -17,6 +17,8 @@ class Routes(
   HomeController_0: controllers.HomeController,
   // @LINE:23
   Assets_1: controllers.Assets,
+  // @LINE:25
+  SoftwareController_2: controllers.SoftwareController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -25,13 +27,15 @@ class Routes(
     // @LINE:6
     HomeController_0: controllers.HomeController,
     // @LINE:23
-    Assets_1: controllers.Assets
-  ) = this(errorHandler, HomeController_0, Assets_1, "/")
+    Assets_1: controllers.Assets,
+    // @LINE:25
+    SoftwareController_2: controllers.SoftwareController
+  ) = this(errorHandler, HomeController_0, Assets_1, SoftwareController_2, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, Assets_1, prefix)
+    new Routes(errorHandler, HomeController_0, Assets_1, SoftwareController_2, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -47,6 +51,12 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """computers/""" + "$" + """id<[^/]+>""", """controllers.HomeController.update(request:Request, id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """computers/""" + "$" + """id<[^/]+>/delete""", """controllers.HomeController.delete(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/detail""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/list""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/all""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/create""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/update""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/client/software/delete""", """controllers.SoftwareController.getDetailSoftware(request:Request)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -208,6 +218,126 @@ class Routes(
     )
   )
 
+  // @LINE:25
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/detail")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware8_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """api/client/software/detail""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/list")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware9_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """api/client/software/list""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:27
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/all")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware10_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "GET",
+      this.prefix + """api/client/software/all""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:28
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware11_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/create")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware11_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "POST",
+      this.prefix + """api/client/software/create""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:29
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware12_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/update")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware12_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "PUT",
+      this.prefix + """api/client/software/update""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:30
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware13_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/client/software/delete")))
+  )
+  private[this] lazy val controllers_SoftwareController_getDetailSoftware13_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      SoftwareController_2.getDetailSoftware(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.SoftwareController",
+      "getDetailSoftware",
+      Seq(classOf[play.mvc.Http.Request]),
+      "DELETE",
+      this.prefix + """api/client/software/delete""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -262,6 +392,48 @@ class Routes(
     case controllers_Assets_at7_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at7_invoker.call(Assets_1.at(path, file))
+      }
+  
+    // @LINE:25
+    case controllers_SoftwareController_getDetailSoftware8_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware8_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
+      }
+  
+    // @LINE:26
+    case controllers_SoftwareController_getDetailSoftware9_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware9_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
+      }
+  
+    // @LINE:27
+    case controllers_SoftwareController_getDetailSoftware10_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware10_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
+      }
+  
+    // @LINE:28
+    case controllers_SoftwareController_getDetailSoftware11_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware11_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
+      }
+  
+    // @LINE:29
+    case controllers_SoftwareController_getDetailSoftware12_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware12_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
+      }
+  
+    // @LINE:30
+    case controllers_SoftwareController_getDetailSoftware13_route(params@_) =>
+      call { 
+        controllers_SoftwareController_getDetailSoftware13_invoker.call(
+          req => SoftwareController_2.getDetailSoftware(req))
       }
   }
 }

@@ -1,6 +1,7 @@
 package controllers;
 
 import io.ebean.PagedList;
+import models.Software;
 import models.requests.CommonListRequest;
 import models.requests.SoftwareRequestModel;
 import models.responses.SoftwareResponseModel;
@@ -28,14 +29,14 @@ public class SoftwareController extends BaseController {
 
     public Result getDetailSoftware(Http.Request request) throws Exception {
         SoftwareRequestModel softwareRequestModel = this.getBody(request, SoftwareRequestModel.class);
-        SoftwareResponseModel result = this.softwareService.getDetail(softwareRequestModel);
+        Software result = this.softwareService.getDetail(softwareRequestModel);
         return this.ok(result);
     }
 
     public Result getListSoftware(Http.Request request) throws Exception {
         CommonListRequest commonListRequest =
                 this.getBody(request, CommonListRequest.class);
-        PagedList<SoftwareResponseModel> result = this.softwareService.getPageListSoftware(commonListRequest);
+        PagedList<Software> result = this.softwareService.getPageListSoftware(commonListRequest);
         return this.ok(result);
     }
 

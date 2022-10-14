@@ -76,5 +76,28 @@ package controllers {
   
   }
 
+  // @LINE:25
+  class ReverseSoftwareController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def getDetailSoftware(): Call = {
+    
+      () match {
+      
+        // @LINE:25
+        case ()  =>
+          
+          Call("GET", _prefix + { _defaultPrefix } + "api/client/software/detail")
+      
+      }
+    
+    }
+  
+  }
+
 
 }

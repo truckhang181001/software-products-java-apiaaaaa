@@ -3,6 +3,7 @@ package repository;
 import io.ebean.DB;
 import io.ebean.PagedList;
 import models.Software;
+import models.requests.CommonListRequest;
 
 import java.util.Optional;
 
@@ -14,13 +15,13 @@ public class SoftwareRepository {
         return software.isPresent() ? software.get() : null;
     }
 
-    public PagedList<Software> getPageListSoftware(int page, int pageSize, String sortBy, String order, String filter) throws Exception {
+    public PagedList<Software> getPageListSoftware(CommonListRequest commonListRequest) throws Exception {
         PagedList<Software> result = DB.find(Software.class)
                 .fetch("company").where()
-                .ilike("name", "%" + filter + "%")
-                .orderBy(sortBy + " " + order)
-                .setFirstRow(page * pageSize)
-                .setMaxRows(pageSize)
+                .ilike("name", "%" + commonListRequest.getFilter() + "%")
+                .orderBy(commonListRequest.getSortBy() + " " + commonListRequest.getOrderBy())
+                .setFirstRow(commonListRequest.getPage() * commonListRequest.getPageSize())
+                .setMaxRows(commonListRequest.getPageSize())
                 .findPagedList();
         return result;
     }
