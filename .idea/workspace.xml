@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d6387eb-939d-432c-8723-d704814a2b3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/services/ErrorHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/services/ErrorHandlerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/controllers/SoftwareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/controllers/SoftwareController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/services/software/SoftwareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/services/software/SoftwareService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/BaseApiService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/CommonErrorResponseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/CommonException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/ErrorHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/ErrorModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/utils/ObjectReference.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/sync/copy-resource" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/sync/copy-resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/zinc/inc_compile_2.13.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/zinc/inc_compile_2.13.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/playCommonClassloader/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/playCommonClassloader/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,11 +126,22 @@
       <option name="presentableId" value="Default" />
       <updated>1665767960692</updated>
       <workItem from="1665767962026" duration="7645000" />
-      <workItem from="1666502780222" duration="510000" />
+      <workItem from="1666502780222" duration="1490000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
