@@ -26,7 +26,7 @@ public class ErrorHandlerService implements HttpErrorHandler {
             return CompletableFuture.completedFuture(Results.badRequest(Json.toJson(exception)));
         }
 
-        CommonErrorResponseModel commonErrorResponseModel = new CommonErrorResponseModel(false, new ErrorModel(exception.getClass().getName(),exception.getMessage()));
+        CommonErrorResponseModel commonErrorResponseModel = new CommonErrorResponseModel(false, new ErrorModel("ERROR","UNKNOWN"));
 
         return CompletableFuture.completedFuture(Results.badRequest(Json.toJson(commonErrorResponseModel)));
     }

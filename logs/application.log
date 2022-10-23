@@ -1,142 +1,42 @@
-2022-10-15 02:04:19,952 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized
-2022-10-15 02:04:19,976 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2022-10-15 02:04:20,173 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-8 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
-2022-10-15 02:04:21,171 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2022-10-15 02:14:09,639 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] initialized
+2022-10-15 02:14:09,647 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2022-10-15 02:14:09,710 [WARN] from io.avaje.config.InitialLoader in play-dev-mode-akka.actor.default-dispatcher-8 - Loading properties from ebean.properties is deprecated. Please migrate to use application.yaml or application.properties instead.
+2022-10-15 02:14:10,573 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2022-10-15 02:04:21,204 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2022-10-15 02:05:50,383 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-11 - Shutting down connection pool.
-2022-10-15 02:05:50,880 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized
-2022-10-15 02:05:50,880 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2022-10-15 02:05:50,998 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2022-10-15 02:05:51,006 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
-2022-10-15 02:05:51,323 [ERROR] from play.api.http.DefaultHttpErrorHandler in application-akka.actor.default-dispatcher-4 - 
-
-! @7pa8bn7fe - Internal server error, for (POST) [/api/client/software/create] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[DataIntegrityException: Error[Cannot add or update a child row: a foreign key constraint fails (`software_products`.`software`, CONSTRAINT `fk_software_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`))]]]
-	at play.api.http.HttpErrorHandlerExceptions$.$anonfun$convertToPlayException$2(HttpErrorHandler.scala:381)
-	at scala.Option.map(Option.scala:242)
-	at play.api.http.HttpErrorHandlerExceptions$.convertToPlayException(HttpErrorHandler.scala:380)
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:373)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:264)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:436)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:428)
-	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:490)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:63)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:100)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:100)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:49)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
-Caused by: io.ebean.DataIntegrityException: Error[Cannot add or update a child row: a foreign key constraint fails (`software_products`.`software`, CONSTRAINT `fk_software_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`))]
-	at io.ebean.config.dbplatform.SqlCodeTranslator.translate(SqlCodeTranslator.java:49)
-	at io.ebean.config.dbplatform.DatabasePlatform.translate(DatabasePlatform.java:231)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:82)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:49)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeInsert(PersistRequestBean.java:1237)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:779)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeNoBatch(PersistRequestBean.java:827)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:818)
-	at io.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:508)
-	at io.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:456)
-	at io.ebeaninternal.server.core.DefaultServer.insert(DefaultServer.java:1743)
-	at io.ebeaninternal.server.core.DefaultServer.insert(DefaultServer.java:1735)
-	at io.ebean.DB.insert(DB.java:372)
-	at repository.SoftwareRepository.createSoftware(SoftwareRepository.java:31)
-	at services.software.SoftwareService.createSoftware(SoftwareService.java:36)
-	at controllers.SoftwareController.createSoftware(SoftwareController.java:47)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$33(Routes.scala:422)
-	at play.core.routing.HandlerInvokerFactory$$anon$8.resultCall(HandlerInvoker.scala:150)
-	at play.core.routing.HandlerInvokerFactory$$anon$8.resultCall(HandlerInvoker.scala:149)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:115)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
-	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
-	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
-	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
-	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:182)
-	at scala.concurrent.Future$.apply(Future.scala:678)
-	at play.core.j.JavaAction.apply(JavaAction.scala:176)
-	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
-	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
-	... 11 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`software_products`.`software`, CONSTRAINT `fk_software_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`))
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
-	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
-	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
-	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
-	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
-	at io.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:94)
-	at io.ebeaninternal.server.persist.dml.InsertHandler.execute(InsertHandler.java:124)
-	at io.ebeaninternal.server.persist.dml.DmlHandler.executeNoBatch(DmlHandler.java:99)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:73)
-	... 44 common frames omitted
-2022-10-15 02:06:14,212 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-3 - Shutting down connection pool.
-2022-10-15 02:06:14,375 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] initialized
-2022-10-15 02:06:14,375 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2022-10-15 02:06:14,532 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2022-10-15 02:06:14,549 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev) (no global state)
-2022-10-15 02:07:15,851 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-7 - Shutting down connection pool.
-2022-10-15 02:07:16,219 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-11 - Database [default] initialized
-2022-10-15 02:07:16,219 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2022-10-15 02:07:16,319 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2022-10-15 02:07:16,324 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
-2022-10-15 02:07:56,880 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-4 - Shutting down connection pool.
-2022-10-15 02:07:57,048 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] initialized
-2022-10-15 02:07:57,048 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2022-10-15 02:07:57,167 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2022-10-15 02:07:57,174 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev) (no global state)
-2022-10-15 02:09:10,258 [INFO] from play.api.internal.libs.concurrent.CoordinatedShutdownSupport in pool-8-thread-4 - Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
-2022-10-15 02:09:10,258 [INFO] from play.core.server.AkkaHttpServer in pool-8-thread-4 - Stopping Akka HTTP server...
-2022-10-15 02:09:10,260 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-18 - Terminating server binding for /0:0:0:0:0:0:0:0:9000
-2022-10-15 02:09:10,292 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-7 - Shutting down connection pool.
-2022-10-15 02:09:10,310 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-20 - Running provided shutdown stop hooks
+2022-10-15 02:14:10,602 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2022-10-15 02:16:20,182 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s382ms).
+2022-10-15 02:17:35,820 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s608ms).
+2022-10-15 02:34:11,498 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m35s675ms).
+2022-10-15 02:51:50,080 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m8s560ms).
+2022-10-15 04:23:38,914 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s801ms).
+2022-10-15 04:40:57,438 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m18s520ms).
+2022-10-15 05:57:58,389 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m134ms).
+2022-10-15 07:15:13,785 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s559ms).
+2022-10-15 07:21:12,365 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s545ms).
+2022-10-15 07:26:40,877 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s513ms).
+2022-10-15 08:37:53,749 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m42s78ms).
+2022-10-15 09:40:38,662 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s157ms).
+2022-10-15 09:45:33,404 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m54s754ms).
+2022-10-15 12:52:36,042 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m891ms).
+2022-10-15 13:18:32,415 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m56s380ms).
+2022-10-15 14:19:02,434 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m29s951ms).
+2022-10-15 15:41:44,034 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m41s596ms).
+2022-10-15 16:34:19,591 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m35s566ms).
+2022-10-15 16:43:22,907 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m33s273ms).
+2022-10-15 17:00:17,045 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m24s117ms).
+2022-10-15 17:31:02,095 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m45s49ms).
+2022-10-15 18:58:44,833 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27m12s700ms).
+2022-10-15 20:02:25,400 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m40s570ms).
+2022-10-15 20:19:52,119 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m26s715ms).
+2022-10-15 21:43:45,912 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m23s410ms).
+2022-10-15 23:04:51,379 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m5s480ms).
+2022-10-16 00:00:37,104 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m45s724ms).
+2022-10-16 00:04:51,007 [INFO] from play.api.internal.libs.concurrent.CoordinatedShutdownSupport in pool-8-thread-7 - Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
+2022-10-16 00:04:54,854 [INFO] from play.core.server.AkkaHttpServer in pool-8-thread-7 - Stopping Akka HTTP server...
+2022-10-16 00:04:55,017 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-17 - Terminating server binding for /0:0:0:0:0:0:0:0:9000
+2022-10-16 00:04:55,268 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.internal-dispatcher-10 - Shutting down connection pool.
+2022-10-16 00:04:55,483 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-19 - Running provided shutdown stop hooks
